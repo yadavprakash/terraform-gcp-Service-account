@@ -8,7 +8,7 @@ module "labels" {
 }
 data "google_client_config" "current" {
 }
-########################################(service_account)###############################################
+#==================================(service_account)================================================
 resource "google_service_account" "service_account" {
   count        = var.google_service_account_enabled && var.enabled ? 1 : 0
   account_id   = var.account_id
@@ -17,7 +17,7 @@ resource "google_service_account" "service_account" {
   project      = data.google_client_config.current.project
 }
 
-########################################(key)###########################################################
+#==================================(key)=============================================================
 resource "google_service_account_key" "mykey" {
   count              = var.google_service_account_key_enabled && var.enabled ? 1 : 0
   service_account_id = join("", google_service_account.service_account[*].name)
@@ -27,7 +27,7 @@ resource "google_service_account_key" "mykey" {
   key_algorithm      = var.key_algorithm
 }
 
-###########################################(iam)########################################################
+#==========================================(iam)==================================================
 resource "google_service_account_iam_binding" "admin-account-iam" {
   count              = var.google_service_account_iam_binding_enabled && var.enabled ? 1 : 0
   service_account_id = join("", google_service_account.service_account[*].name)
