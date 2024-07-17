@@ -20,7 +20,7 @@ To use this module, you should have Terraform installed and configured for GCP. 
 
 ```hcl
 module "service-account" {
-  source                             = "https://github.com/opsstation/terraform-gcp-Service-account.git"
+  source                             = "https://github.com/yadavprakash/terraform-gcp-Service-account.git"
   name                               = "dev"
   environment                        = "test"
   google_service_account_key_enabled = true
@@ -46,14 +46,14 @@ This example demonstrates how to create various GCP resources using the provided
 - This module currently does not provide any outputs.
 
 # Examples
-For detailed examples on how to use this module, please refer to the [example](https://github.com/opsstation/terraform-gcp-Service-account/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/yadavprakash/terraform-gcp-Service-account/tree/master/_example) directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-gcp-Service-account/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-gcp-Service-account/blob/master/LICENSE) file for details.
 
 
 
@@ -76,7 +76,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::git@github.com:opsstation/terraform-gcp-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::git@github.com:yadavprakash/terraform-gcp-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -102,7 +102,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_keepers"></a> [keepers](#input\_keepers) | Arbitrary map of values that, when changed, will trigger a new key to be generated. | `map(string)` | `null` | no |
 | <a name="input_key_algorithm"></a> [key\_algorithm](#input\_key\_algorithm) | (Optional) The algorithm used to generate the key. KEY\_ALG\_RSA\_2048 is the default algorithm. | `string` | `"KEY_ALG_RSA_2048"` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. sequence of application name and environment `name`,`environment`,'attribute' [`webserver`,`qa`,`devops`,`public`,] . | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy,opsstation | `string` | `"opsstation"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy,yadavprakash | `string` | `"yadavprakash"` | no |
 | <a name="input_members"></a> [members](#input\_members) | n/a | `list(any)` | `[]` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the resource. Provided by the client when the resource is created. | `string` | `""` | no |
 | <a name="input_private_key_type"></a> [private\_key\_type](#input\_private\_key\_type) | (Optional) The output format of the private key. TYPE\_GOOGLE\_CREDENTIALS\_FILE is the default output format. | `string` | `"TYPE_GOOGLE_CREDENTIALS_FILE"` | no |
